@@ -53,6 +53,7 @@ class PostsController extends Controller
             'slug' => str_slug(request('title')),
             'content' => request('content'),
             'kategori_id' => request('kategori_id'),
+            'user_id' => auth()->id(),
         ]);
 
         return redirect()->route('post.index')->withSuccess('Data Di Tambahkan !!!');
@@ -99,6 +100,7 @@ class PostsController extends Controller
             'slug' => str_slug(request('title')),
             'content' => request('content'),
             'kategori_id' => request('kategori_id'),
+            'user_id' => auth()->id(),
         ]);
 
         return redirect()->route('post.index')->withInfo('Data Di Ubah !!!');

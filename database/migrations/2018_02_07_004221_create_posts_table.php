@@ -14,12 +14,14 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('kategori_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             $table->string('title');
             $table->string('slug');
             $table->text('content');
             $table->timestamps();
 
             $table->foreign('kategori_id')->references('id')->on('kategoris')->onDelete('CASCADE');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
         });
     }
 
