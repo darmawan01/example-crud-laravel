@@ -18,5 +18,5 @@
   - php artisan serve -> run server
 
 # Video Tutorial
-  [Kawan Koding](www.kawankoding.com)
+  [Kawan Koding](https://kawankoding.com/)
 
