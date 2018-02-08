@@ -17,9 +17,9 @@
                         
                             <div class="form-group">
                                 <label>Category</label>
-                                <select name="kategoris_id" id="" class="form-control">
+                                <select name="kategori_id" id="" class="form-control">
                                     @foreach ($category as $cat)
-                                        <option value="{{ $cat->id }}" @if ($post->kategoris_id == $cat->id)
+                                        <option value="{{ $cat->id }}" @if ($post->kategori_id == $cat->id)
                                             selected
                                         @endif >{{ $cat->name }}</option>
                                     @endforeach

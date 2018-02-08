@@ -7,7 +7,7 @@
                 @foreach ($post as $post)
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            {{ $post->title }}
+                            <a href="{{ route('post.show', $post) }}">{{ $post->title }}</a> {{ $post->created_at->diffForHumans() }}
 
                             <div class="pull-right">
                                 <a href="{{ route('post.edit', $post) }}"><span><button type="submit" class="btn btn-xs btn-primary" >Update</button></span></a>
@@ -24,7 +24,7 @@
                         </div>
         
                         <div class="panel-body">
-                            <p>{{ $post->content }}</p>
+                            <p>{{ str_limit($post->content, 240, '...') }}</p>
                         </div>
                     </div>
                 @endforeach

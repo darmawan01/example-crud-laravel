@@ -45,7 +45,7 @@ class PostsController extends Controller
             'title' => request('title'),
             'slug' => str_slug(request('title')),
             'content' => request('content'),
-            'kategoris_id' => request('kategoris_id'),
+            'kategori_id' => request('kategori_id'),
         ]);
 
         return redirect()->route('post.index')->withSuccess('Data Di Tambahkan !!!');
@@ -58,8 +58,9 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
+        return view('post.show', compact('post'));
     }
 
     /**
@@ -90,7 +91,7 @@ class PostsController extends Controller
             'title' => request('title'),
             'slug' => str_slug(request('title')),
             'content' => request('content'),
-            'kategoris_id' => request('kategoris_id'),
+            'kategori_id' => request('kategori_id'),
         ]);
 
         return redirect()->route('post.index')->withInfo('Data Di Ubah !!!');

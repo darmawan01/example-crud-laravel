@@ -15,6 +15,8 @@
                     @endif
 
                     You are logged in!
+                    <hr/>
+                    <a href="{{ route('post.index') }}"><button class="btn btn-xs btn-primary">Post View</button></a>
                 </div>
             </div>
         </div>
