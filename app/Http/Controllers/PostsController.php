@@ -15,9 +15,11 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $post = Post::all();
+        // $post = Post::all(); --> untuk menampilkan semua data
+        // $posts = Post::latest()->paginate(5); --> membatasi tampil data langsung sebanyak 5
+        $posts = Post::latest()->paginate(env('PER_PAGE')); // membatasi tampil data langsung sebanyak 5
 
-        return view('post.index', compact('post'));
+        return view('post.index', compact('posts'));
     }
 
     /**
@@ -41,6 +43,11 @@ class PostsController extends Controller
      */
     public function store()
     {
+        $this->validate(request(), [
+            'title' => 'required',
+            'content' => 'required|min:10',
+        ]);
+
         Post::create([
             'title' => request('title'),
             'slug' => str_slug(request('title')),
