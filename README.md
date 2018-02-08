@@ -21,3 +21,12 @@
 # Video Tutorial
   [Kawan Koding](https://kawankoding.com/)
 
+# Default
+  - CRUD
+  - Validation
+  - Paginate
+  - Middleware
+
+# Additional
+  - Post Edit/Delete Access
+
