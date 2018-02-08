@@ -17,4 +17,6 @@
   - php artisan key:generate -> generate the APP_KEY 
   - php artisan serve -> run server
 
+# Video Tutorial
+  [Kawan Koding](www.kawankoding.com)
 
