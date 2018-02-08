@@ -3,13 +3,14 @@
 # Run with your computer
   - Composer Install -> installing dependencys package
   - Rename .env.example to .env
-  - set .env :
+  - set .env : <br>
+      <u> make sure you have created the database, and then change the code below according to your database</u>
 
       > DB_CONNECTION=mysql <br>
       > DB_HOST=localhost <br>
       > DB_PORT=3306 <br>
       > DB_DATABASE=database_name <br>
-      > DB_USERNAME=usernam <br>
+      > DB_USERNAME=username <br>
       > DB_PASSWORD=password
 
   - php artisan migrate -> migrate model
