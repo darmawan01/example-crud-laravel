@@ -47,13 +47,16 @@
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
 
-                            <li><a href="{{ route('post.create') }}">Blogs</a></li>
+                            <li><a href="{{ route('post.create') }}" style="margin-right:20px;">Blogs</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                                    <img src="{{ asset('files/'.auth()->user()->avatar) }}" style="width:32px; height:32px; position:absolute; top:10px; left:-20px; border-radius:50%" alt="img">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu">
+                                    <li><a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i>Profile1</a></li>
+                                    <li><a href="{{ url('/profil') }}"><i class="fa fa-btn fa-user"></i>Profile2</a></li>
                                     <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

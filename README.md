@@ -30,3 +30,20 @@
 # Additional
   - Post Edit/Delete Access
 
+# File Uploads
+  ## Upload Using Intervention
+     - composer require intervention/image -> make sure you have been installed GD library
+       > Code in UserController.php
+       > In view just call {{ auth()->user()->avatar }}
+    
+  
+  ## Upload using Laravel storage
+    - In config/filesystem.php
+    - Code in UserProfileController
+      > change local setting to : 
+
+            'local' => [
+                  'driver' => 'local',
+                  'root' => public_path('files'),
+             ],
+  
